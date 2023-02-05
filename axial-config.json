@@ -1,0 +1,24 @@
+{
+    "mode": "development",
+    "build_directory": "build",
+    "project_directory": "project",
+    "clean_on_build": true,
+    "server_localhost": "C:\\Code\\DndevBack\\static",
+    "files_to_copy": [],
+    "directories_to_copy": [
+        {
+            "source": "assets",
+            "dest": "assets"
+        }
+    ],
+    "pages": [
+        {
+            "name": "main",
+            "path": ""
+        },
+        {
+            "name": "history",
+            "path": "about"
+        }
+    ]
+}

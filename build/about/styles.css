@@ -1,0 +1,697 @@
+@charset "utf-8";
+.axial_component_base {
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: all;
+  touch-action: none;
+}
+/* POPUPS ANIMATIONS */
+/* Obfuscator fader */
+@keyframes axial_obfuscator_fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes axial_obfuscator_fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Popup fader */
+@keyframes axial_popup_fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes axial_popup_fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Popup translate_up */
+@keyframes axial_popup_translate_up-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes axial_popup_translate_up-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+/* Popup translate_down */
+@keyframes axial_popup_translate_down-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes axial_popup_translate_down-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+/* Popup translate_left */
+@keyframes axial_popup_translate_left-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes axial_popup_translate_left-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+/* Popup translate_right */
+@keyframes axial_popup_translate_right-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes axial_popup_translate_right-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Popup fade_translate_up */
+@keyframes axial_popup_fade_translate_up-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes axial_popup_fade_translate_up-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+/* Popup fade_translate_down */
+@keyframes axial_popup_fade_translate_down-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes axial_popup_fade_translate_down-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+/* Popup fade_translate_left */
+@keyframes axial_popup_fade_translate_left-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes axial_popup_fade_translate_left-out {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+/* Popup fade_translate_right */
+@keyframes axial_popup_fade_translate_right-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes axial_popup_fade_translate_right-out {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+/**/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/**/
+@keyframes translate_up-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes translate_up-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+/**/
+@keyframes translate_down-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes translate_down-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.axial_button_base {
+  cursor: pointer;
+}
+.axial_button {
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin: 10px;
+  background-color: #0463b1;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #434343;
+  color: #fff;
+  font-weight: 500;
+}
+.axial_toggle_button_group-holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.axial_viewer_base {
+  min-width: 40px;
+  min-height: 40px;
+  overflow: hidden;
+}
+.axial_viewer_base-holder {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.axial_view_base {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+/* FRAMEWORK VARIABLES */
+/* for futur IDE */
+/* BUTTON */
+/* CONTAINER */
+/*
+@axHeaderContainerBackgroundColor: #607d8b;
+@axHeaderContainerBoxShadow: 0px 1px 3px 0px #333;
+*/
+/* MENU */
+/* TOOLTIPS */
+/* NEW SHADOW */
+/* Axial Application Theme */
+/* AxialButton */
+* {
+  box-sizing: border-box;
+}
+html {
+  -ms-touch-action: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Arial', sans-serif;
+  cursor: default;
+  text-shadow: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.axial_background_layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.axial_main_layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.axial_loader_layer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  visibility: hidden;
+}
+.axial_loader_background {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+.axial_loader_content {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.axial_loader_holder {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.axial_loader_icon {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 50%;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  border-bottom: 5px solid #000;
+  border-right: 5px solid transparent;
+}
+.axial_loader_number {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.axial_loader_text {
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+@keyframes axial_loader_icon_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ax-popup-layer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  pointer-events: none;
+}
+.ax-popup-obfuscator {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #000;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: all;
+}
+.ax-popup-element {
+  position: absolute;
+  visibility: hidden;
+  transition-property: none;
+  transition-duration: 0s;
+  pointer-events: all;
+}
+.ax-popup-arrow {
+  position: absolute;
+  display: none;
+}
+/* arrow up */
+.ax-popup-arrow-bottom {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+/* arrow down */
+.ax-popup-arrow-top {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+/* arrow left */
+.ax-popup-arrow-right {
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #fff;
+}
+/* arrow right */
+.ax-popup-arrow-left {
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #fff;
+}
+/* NEW SHADOW */
+.axial_popup_layer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  pointer-events: none;
+}
+.axial_popup_obfuscator {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.73);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: all;
+}
+.axial_popup_base {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: all;
+}
+.axial_popup_arrow {
+  position: absolute;
+  display: none;
+}
+/* arrow up */
+.axial_popup_base_arrow-bottom {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+/* arrow down */
+.axial_popup_base_arrow-top {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+/* arrow left */
+.axial_popup_base_arrow-right {
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #fff;
+}
+/* arrow right */
+.axial_popup_base_arrow-left {
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #fff;
+}
+.ax-progress-element {
+  box-sizing: border-box;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+.ax-progress-bar {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  transition-property: width;
+  transition-duration: 800ms;
+}
+.ax-progress-indicator {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  transition-property: left;
+  transition-duration: 800ms;
+}
+.ax-tooltip-layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.ax-tooltip {
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+}
+.ax-tooltip-arrow {
+  position: absolute;
+  visibility: hidden;
+}
+.ax-tooltip-label {
+  height: auto;
+  min-height: 10px;
+  min-width: 10px;
+  max-width: 180px;
+  padding: 9px;
+  text-align: left;
+  display: flex;
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+  background-color: #000;
+}
+.ax-tooltip-element {
+  position: absolute;
+  min-height: 10px;
+  min-width: 10px;
+  max-width: 180px;
+  height: auto;
+  padding: 12px;
+  text-align: left;
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background-color: #000;
+}
+.ax-tooltip-icon-space {
+  padding-right: 10px;
+}
+/* arrow up */
+.ax-tooltip-arrow-bottom {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #000;
+}
+/* arrow down */
+.ax-tooltip-arrow-top {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #000;
+}
+/* arrow left */
+.ax-tooltip-arrow-right {
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-right: 6px solid #000;
+}
+/* arrow right */
+.ax-tooltip-arrow-left {
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid #000;
+}
+body {
+  background-color: #032b53;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+}
+.dnd-logo {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  width: 63px;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../assets/logo-dnd-blue.png");
+}
+.dnd-page {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  bottom: 0px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.dnd-history-item {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+}
+.dnd-history-item_timeline {
+  position: relative;
+  width: 100px;
+  background-color: #f00;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.dnd-history-item_line {
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+}
+.dnd-history-item_time {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid 3px #fff;
+  background-color: #032b53;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dnd-history-item_text {
+  flex-grow: 1;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.dnd-history-item_title {
+  font-weight: 700;
+}
+/*
+xs 0
+s 576
+m 768
+l 992
+xl 1200
+xxl 1400
+
+cf boostrap
+*/
+/* XS */
+/* M */
