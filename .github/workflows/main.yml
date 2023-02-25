@@ -17,4 +17,5 @@ jobs:
         password: ${{ secrets.dndev_ftp_password }}
         protocol: ftp
         port: 21
+        local-dir: ./build/
         server-dir: ./www/static/
