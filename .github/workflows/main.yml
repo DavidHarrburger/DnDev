@@ -1,0 +1,20 @@
+
+on: workflow_dispatch
+name: 🚀 Deploy on Font-end
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ftpcloud.cluster024.hosting.ovh.net
+        username: dndevfl_ovh-43620
+        password: ${{ secrets.dndev_ftp_password }}
+        protocol: ftp
+        port: 21
+        server-dir: ./www/static/
