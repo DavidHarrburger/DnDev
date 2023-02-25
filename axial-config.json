@@ -3,7 +3,7 @@
     "build_directory": "build",
     "project_directory": "project",
     "clean_on_build": true,
-    "server_localhost": "C:\\Code\\DndevBack\\static",
+    "server_localhost": "C:\\Axial\\DnDevServer\\static",
     "files_to_copy": [],
     "directories_to_copy": [
         {
@@ -18,7 +18,23 @@
         },
         {
             "name": "history",
-            "path": "about"
+            "path": "a-propos"
+        },
+        {
+            "name": "privacy",
+            "path": "politique-de-confidentialite"
+        },
+        {
+            "name": "legal",
+            "path": "mentions-legales"
+        },
+        {
+            "name": "contact",
+            "path": "contact"
+        },
+        {
+            "name": "portfolio",
+            "path": "realisations"
         }
     ]
 }

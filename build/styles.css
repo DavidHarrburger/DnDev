@@ -631,7 +631,56 @@ a {
   text-decoration: none;
 }
 a:visited {
+  color: #fefefe;
+}
+input {
+  min-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  appearance: none;
+  background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 6px;
+  border: solid 2px #fff;
   color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+input::placeholder {
+  font-family: "Quicksand", sans-serif;
+  background-color: transparent;
+  color: #d3d3d3;
+  font-size: 16px;
+  font-weight: 300;
+}
+textarea {
+  min-height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  resize: vertical;
+  appearance: none;
+  background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 6px;
+  border: solid 2px #fff;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+textarea::placeholder {
+  font-family: "Quicksand", sans-serif;
+  background-color: transparent;
+  color: #d3d3d3;
+  font-size: 16px;
+  font-weight: 300;
 }
 .dnd-button {
   padding: 10px;
@@ -639,6 +688,7 @@ a:visited {
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
   font-weight: 400;
   border-radius: 4px;
   color: #fff;
@@ -655,6 +705,9 @@ a:visited {
   background-size: contain;
   background-position: center;
   background-image: url("./assets/logo-dnd-blue.png");
+}
+.dnd-spacer {
+  flex-grow: 1;
 }
 .dnd-holder {
   position: absolute;
@@ -685,13 +738,13 @@ a:visited {
 .dnd-main-item-1 {
   grid-column: 1 / span 12;
   height: 264px;
-  padding: 12px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0px;
 }
 .dnd-main-item-1_photo {
+  padding: 12px;
   grid-column: 3 / span 6;
   grid-row: 1 / span 4;
   display: flex;
@@ -703,6 +756,7 @@ a:visited {
   grid-row: 2 / span 3;
   background-color: #032b53;
   padding-left: 12px;
+  padding-bottom: 12px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -733,6 +787,7 @@ a:visited {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 100px auto;
   gap: 0px;
+  background-color: #032b53;
 }
 .dnd-main-item-2_text {
   grid-column: 1 / span 8;
@@ -759,6 +814,7 @@ a:visited {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto;
   gap: 0px;
+  background-color: #032b53;
 }
 .dnd-main-item-3_text {
   grid-column: 1 / span 8;
@@ -772,11 +828,13 @@ a:visited {
   margin-top: 12px;
   grid-column: 3 / span 4;
   grid-row: 2;
+  /*display: none; /*temp*/
 }
 .dnd-main-item-4 {
   grid-column: 1 / span 12;
   height: auto;
   padding: 12px;
+  background-color: #032b53;
 }
 .dnd-main-item-4_text {
   width: 100%;
@@ -794,6 +852,7 @@ a:visited {
   display: block;
   width: 100%;
   height: auto;
+  background-color: #000;
 }
 .dnd-main-item-5 {
   grid-column: 1 / span 12;
@@ -803,25 +862,89 @@ a:visited {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto;
   gap: 0px;
+  margin-bottom: 20px;
+  background-color: #032b53;
 }
 .dnd-main-item-5_text {
-  grid-column: 4 / span 5;
+  grid-column: 3 / span 6;
   grid-row: 1;
   display: flex;
   flex-direction: column;
 }
 .dnd-main-item-5_button {
   margin-top: 12px;
-  grid-column: 6 / span 3;
+  grid-column: 5 / span 4;
   grid-row: 2;
 }
 .dnd-main-item-5_icon {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   grid-row: 1 / span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.dnd-contact {
+  grid-column: 1 / span 12;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+}
+.dnd-contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.dnd-footer {
+  grid-column: 1 / span 12;
+  background-color: #01101f;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+}
+.dnd-footer-block {
+  margin-bottom: 10px;
+}
+.dnd-footer-block_menu {
+  grid-column: 1;
+  grid-row: 1;
+}
+.dnd-footer-block_legal {
+  grid-column: 2;
+  grid-row: 1;
+}
+.dnd-footer-block_social {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.dnd-footer-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.dnd-footer-item {
+  display: block;
+  font-weight: 300;
+  padding-left: 4px;
+  margin-bottom: 2px;
+}
+.dnd-footer-italic {
+  font-weight: 200;
+  font-size: 12px;
+  font-style: italic;
+}
+.dnd-footer-icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+  padding: 6px;
 }
 /*
 xs 0
