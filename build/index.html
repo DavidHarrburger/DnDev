@@ -41,8 +41,18 @@
             <slot name="axial-content"></slot>
         </div>
     </template>
-
     <!-- END AXIAL TEMPLATES -->
+
+    <!-- DND TEMPLATES -->
+    <!-- DnD -->
+    <template id="dnd-contact-form-template">
+        <link rel="stylesheet" href="./styles.css">
+        <form class="dnd-contact-form">
+            <input type="email" id="messageEmail" required placeholder="Votre e-mail">
+            <textarea id="messageText" required placeholder="Votre message"></textarea>
+            <div id="messageButton" class="dnd-button">Envoyer</div>
+        </form>
+    </template>
     
     <div id="axialBackgroundLayer" class="axial_background_layer">
         <div class="dnd-logo"></div>
@@ -117,11 +127,7 @@
                 </div>
 
                 <div class="dnd-contact">
-                    <form class="dnd-contact-form">
-                        <input type="email" id="messageEmail" required placeholder="Votre e-mail">
-                        <textarea placeholder="Votre message" required></textarea>
-                        <div class="dnd-button">Envoyer</div>
-                    </form>
+                    <dnd-contact-form></dnd-contact-form>
                 </div>
 
                 <!-- FOOTER -->
