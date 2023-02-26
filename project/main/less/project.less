@@ -3,6 +3,7 @@
 @cardBorder: solid 3px #fff;
 @mainBackgroundColor: #032b53;
 @footerBackgroundColor: #01101f;
+@tagBackgroundColor: #01101f;
 
 
 
@@ -281,6 +282,33 @@ textarea::placeholder
     border-radius: 12px;
     border: @cardBorder;
 }
+.dnd-main-item-4_tags
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.dnd-tag-item
+{
+    height: 28px;
+    border-radius: 14px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-left: 11px;
+    padding-right: 10px;
+    background-color: @tagBackgroundColor;
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 1px #111;
+}
+
 .dnd-video
 {
     display: block;
