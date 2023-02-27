@@ -6,7 +6,6 @@
 @tagBackgroundColor: #01101f;
 
 
-
 body
 {
     background-color: @Body___backgroundColor;
@@ -379,7 +378,7 @@ textarea::placeholder
     padding: 12px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
 
 }
 .dnd-footer-block
@@ -400,6 +399,15 @@ textarea::placeholder
 {
     grid-column: 1 / span 2;
     grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dnd-footer-block_fontawesome
+{
+    grid-column: 1 / span 2;
+    grid-row: 3;
     display: flex;
     flex-direction: row;
     align-items: center;
