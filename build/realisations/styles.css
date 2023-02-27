@@ -725,6 +725,10 @@ a:visited {
   fill: #fff;
   padding: 6px;
 }
+/* portfolio */
+.dnd-portfolio-item {
+  width: 100%;
+}
 /*
 xs 0
 s 576
