@@ -25,7 +25,10 @@ a:visited
 {
     flex-grow: 1;
 }
-
+.dnd-italic
+{
+    font-style: italic;
+}
 .dnd-header
 {
     width: 100%;
@@ -146,6 +149,7 @@ a:visited
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex: 0 0 100px
 }
 .dnd-history-item_line
 {
@@ -175,10 +179,16 @@ a:visited
 }
 .dnd-history-item_text
 {
-    flex-grow: 1;
+    height: auto;
+    padding-top: 10px;
     padding-left: 14px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+}
+.dnd-history-item_info
+{
+    width: 100%;
 }
 .dnd-history-item_title
 {
