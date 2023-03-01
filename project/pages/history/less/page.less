@@ -1,0 +1,196 @@
+@import "../../../../axial/less/variables.less";
+
+@cardBorder: solid 3px #fff;
+@mainBackgroundColor: #032b53;
+@footerBackgroundColor: #01101f;
+@tagBackgroundColor: #01101f;
+
+
+body
+{
+    background-color: @Body___backgroundColor;
+    font-family: "Quicksand", sans-serif;
+    color: #fff;
+}
+a
+{
+    color: #fff;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #fefefe;
+}
+.dnd-spacer
+{
+    flex-grow: 1;
+}
+.dnd-italic
+{
+    font-style: italic;
+}
+.dnd-header
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dnd-logo
+{
+    width: 63px;
+    height: 63px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../assets/logo-dnd-blue.png");
+}
+
+.dnd-page
+{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.dnd-page-content
+{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+}
+/* footer */
+.dnd-footer
+{
+    grid-column: 1 / span 12;
+    background-color: @footerBackgroundColor;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+
+}
+.dnd-footer-block
+{
+    margin-bottom: 10px;
+}
+.dnd-footer-block_menu
+{
+    grid-column: 1;
+    grid-row: 1;
+}
+.dnd-footer-block_legal
+{
+    grid-column: 2;
+    grid-row: 1;
+}
+.dnd-footer-block_social
+{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dnd-footer-block_fontawesome
+{
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dnd-footer-title
+{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.dnd-footer-item
+{
+    display: block;
+    font-weight: 300;
+    padding-left: 4px;
+    margin-bottom: 2px;
+}
+.dnd-footer-italic
+{
+    font-weight: 200;
+    font-size: 12px;
+    font-style: italic;
+}
+.dnd-footer-icon
+{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    fill: #fff;
+    padding: 6px;
+}
+/* local history */
+.dnd-history-item
+{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.dnd-history-item_timeline
+{
+    position: relative;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 0 0 100px
+}
+.dnd-history-item_line
+{
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+}
+.dnd-history-item_time
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: @cardBorder;
+    background-color: @tagBackgroundColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dnd-history-item_date
+{
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 30px;
+}
+.dnd-history-item_text
+{
+    height: auto;
+    padding-top: 10px;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.dnd-history-item_info
+{
+    width: 100%;
+}
+.dnd-history-item_title
+{
+    font-weight: 700;
+}

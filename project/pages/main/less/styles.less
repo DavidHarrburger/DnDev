@@ -3,26 +3,32 @@
 /* global fonts*/
 @import "../../../less/global-fonts.less";
 
-/* need to be re written */
-@import "../../../../axial/less/core.less";
+/* axial variables*/
+@import "../../../../axial/less/variables.less";
 
+/* global variables */
+@import "../../../less/global-variables.less";
+
+/* axial core & application : will be probably merged */
+@import "../../../../axial/less/core.less";
+@import "../../../../axial/less/application.less";
+
+/* axial aniimation */
 @import "../../../../axial/less/animation.less";
 
+/* axial components */
 @import "../../../../axial/less/button.less";
 @import "../../../../axial/less/view.less";
-
-@import "../../../../axial/less/variables.less";
-@import "../../../../axial/less/application.less";
 @import "../../../../axial/less/loader.less";
 @import "../../../../axial/less/popup.less";
 @import "../../../../axial/less/progress.less";
 @import "../../../../axial/less/tooltip.less";
 
-/* global styles */
-@import "../../../less/global-variables.less";
+/* global project styles */
+
 @import "../../../less/global.less";
 @import "../../../less/global-responsive.less";
 
-/* local page */
+/* local page styles */
 @import "./page.less";
 @import "./page-responsive.less";
