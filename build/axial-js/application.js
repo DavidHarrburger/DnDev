@@ -120,33 +120,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./project/js/components/DndContactForm.js":
-/*!*************************************************!*\
-  !*** ./project/js/components/DndContactForm.js ***!
-  \*************************************************/
+/***/ "./project/pages/axial/js/DndAxialPage.js":
+/*!************************************************!*\
+  !*** ./project/pages/axial/js/DndAxialPage.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"DndContactForm\": () => (/* binding */ DndContactForm)\n/* harmony export */ });\n/* harmony import */ var _axial_js_core_AxialComponentBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../axial/js/core/AxialComponentBase */ \"./axial/js/core/AxialComponentBase.js\");\n\r\n\r\n;\r\n\r\nclass DndContactForm extends _axial_js_core_AxialComponentBase__WEBPACK_IMPORTED_MODULE_0__.AxialComponentBase\r\n{\r\n    \r\n    /** @type { HTMLInputElement } */\r\n    #messageEmail;\r\n    /** @type { HTMLTextAreaElement } */\r\n    #messageText;\r\n    /** @type { HTMLElement } */\r\n    #messageButton;\r\n\r\n    #boundMessageButtonClickHandler;\r\n\r\n    constructor()\r\n    {\r\n        super();\r\n        console.log(\"Hello component DndContactForm\");\r\n        this.#boundMessageButtonClickHandler = this.messageButtonClickHandler.bind(this);\r\n        this.template = \"dnd-contact-form-template\";\r\n        \r\n    }\r\n\r\n    connectedCallback()\r\n    {\r\n        this.#messageEmail = this.shadowRoot.getElementById(\"messageEmail\");\r\n        this.#messageText = this.shadowRoot.getElementById(\"messageText\");\r\n        this.#messageButton = this.shadowRoot.getElementById(\"messageButton\");\r\n        if( this.#messageButton )\r\n        {\r\n            this.#messageButton.addEventListener(\"click\", this.#boundMessageButtonClickHandler);\r\n        }\r\n        console.log(this.#messageButton);\r\n    }\r\n\r\n    messageButtonClickHandler( event )\r\n    {\r\n        console.log(\"click\");\r\n        this.#sendForm();\r\n    }\r\n\r\n    async #sendForm()\r\n    {\r\n        try\r\n        {\r\n            const infos = { email: this.#messageEmail.value, text: this.#messageText.value }\r\n            const response = await fetch(\"./post/mail\", { method: \"POST\", body: JSON.stringify(infos), headers: {\"Content-Type\": \"application/json\"} });\r\n            const json = await response.json();\r\n            console.log(json)\r\n        }\r\n        catch(err)\r\n        {\r\n            console.log(err);\r\n        }\r\n    }\r\n}\r\n\r\nwindow.customElements.define(\"dnd-contact-form\", DndContactForm);\r\n\n\n//# sourceURL=webpack:///./project/js/components/DndContactForm.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"DndAxialPage\": () => (/* binding */ DndAxialPage)\n/* harmony export */ });\n/* harmony import */ var _js_DndApplicationBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/DndApplicationBase */ \"./project/js/DndApplicationBase.js\");\n\r\n;\r\n\r\nclass DndAxialPage extends _js_DndApplicationBase__WEBPACK_IMPORTED_MODULE_0__.DndApplicationBase\r\n{\r\n    constructor()\r\n    {\r\n        super();\r\n        console.log(\"Hello DndAxialPage\");\r\n    }\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./project/pages/axial/js/DndAxialPage.js?");
 
 /***/ }),
 
-/***/ "./project/pages/main/js/DndMainPage.js":
-/*!**********************************************!*\
-  !*** ./project/pages/main/js/DndMainPage.js ***!
-  \**********************************************/
+/***/ "./project/pages/axial/js/Page.js":
+/*!****************************************!*\
+  !*** ./project/pages/axial/js/Page.js ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"DndMainPage\": () => (/* binding */ DndMainPage)\n/* harmony export */ });\n/* harmony import */ var _js_DndApplicationBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/DndApplicationBase */ \"./project/js/DndApplicationBase.js\");\n/* harmony import */ var _js_components_DndContactForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../js/components/DndContactForm */ \"./project/js/components/DndContactForm.js\");\n\r\n\r\n;\r\n\r\n\r\nclass DndMainPage extends _js_DndApplicationBase__WEBPACK_IMPORTED_MODULE_0__.DndApplicationBase\r\n{\r\n    constructor()\r\n    {\r\n        super();\r\n        console.log(\"Hello DndMainPage\");\r\n    }\r\n    \r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./project/pages/main/js/DndMainPage.js?");
-
-/***/ }),
-
-/***/ "./project/pages/main/js/Page.js":
-/*!***************************************!*\
-  !*** ./project/pages/main/js/Page.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _DndMainPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DndMainPage */ \"./project/pages/main/js/DndMainPage.js\");\n\r\n;\r\nconst DND_MAIN_PAGE = new _DndMainPage__WEBPACK_IMPORTED_MODULE_0__.DndMainPage();\n\n//# sourceURL=webpack:///./project/pages/main/js/Page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _DndAxialPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DndAxialPage */ \"./project/pages/axial/js/DndAxialPage.js\");\n\r\n;\r\nconst DND_AXIAL_PAGE = new _DndAxialPage__WEBPACK_IMPORTED_MODULE_0__.DndAxialPage();\n\n//# sourceURL=webpack:///./project/pages/axial/js/Page.js?");
 
 /***/ })
 
@@ -210,7 +200,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Dnd
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./project/pages/main/js/Page.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./project/pages/axial/js/Page.js");
 /******/ 	
 /******/ })()
 ;

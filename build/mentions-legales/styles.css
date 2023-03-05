@@ -15,6 +15,9 @@
 /* Axial Application Theme */
 /* AxialButton */
 /* global variables */
+/* Axial Application Theme */
+/* AxialButton */
+/* Project variables */
 /* axial core & application : will be probably merged */
 .axial_component_base {
   display: block;
@@ -33,7 +36,6 @@ html {
   -ms-touch-action: none;
   touch-action: none;
   -webkit-tap-highlight-color: transparent;
-  font-family: 'Arial', sans-serif;
   cursor: default;
   text-shadow: none;
   overflow-x: hidden;
@@ -47,6 +49,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  font-family: "Quicksand", sans-serif;
   -webkit-text-size-adjust: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -316,6 +319,7 @@ input {
   overflow: hidden;
   width: -moz-fit-content;
   width: fit-content;
+  min-height: 42px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -324,10 +328,9 @@ input {
   padding-bottom: 10px;
   padding-left: 14px;
   padding-right: 14px;
-  margin: 10px;
   background-color: #0463b1;
   border-radius: 4px;
-  box-shadow: 0px 1px 1px #434343;
+  box-shadow: 0px 1px 1px #111;
   color: #fff;
   font-weight: 500;
 }
@@ -336,6 +339,59 @@ input {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+/* AxialToggleSwitch */
+.axial_toggle_switch {
+  width: 72px;
+  min-height: 42px;
+  height: 42px;
+  border-radius: 21px;
+  border: 3px solid #fff;
+  padding: 4px;
+  background-color: #111;
+}
+.axial_toggle_switch-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: relative;
+  left: 0px;
+  transition-property: left;
+  transition-duration: 200ms;
+}
+/* AxialToggleRadio */
+.axial_toggle_radio {
+  width: auto;
+  min-width: 42px;
+  height: 42px;
+  min-height: 42px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.axial_toggle_radio-border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #111;
+  margin-right: 12px;
+  border: solid 2px #fff;
+}
+.axial_toggle_radio-circle {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 200ms;
 }
 .axial_viewer_base {
   min-width: 40px;
@@ -628,22 +684,6 @@ input {
   border-left: 6px solid #000;
 }
 /* global project styles */
-/*
-xs 0
-s 576
-m 768
-l 992
-xl 1200
-xxl 1400
-
-cf boostrap : https://getbootstrap.com/docs/5.0/layout/breakpoints/
-*/
-/* S */
-/* M */
-/* L */
-/* XL */
-/* XXL */
-/* local page styles */
 body {
   background-color: #032b53;
   font-family: "Quicksand", sans-serif;
@@ -656,9 +696,71 @@ a {
 a:visited {
   color: #fefefe;
 }
+p {
+  text-align: justify;
+}
+code {
+  display: block;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #111;
+  user-select: text;
+  cursor: text;
+}
+/* PROJECT STYLES */
+/* utils */
 .dnd-spacer {
   flex-grow: 1;
 }
+.dnd-italic {
+  font-style: italic;
+}
+.dnd-bold {
+  font-weight: 600;
+}
+.dnd-underline {
+  text-decoration: underline;
+}
+.dnd-code-tab-1 {
+  margin-left: 24px;
+}
+.dnd-code-tab-2 {
+  margin-left: 48px;
+}
+/* video */
+.dnd-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+/* tags */
+.dnd-tags {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.dnd-tag-item {
+  height: 28px;
+  border-radius: 14px;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-left: 11px;
+  padding-right: 10px;
+  background-color: #01101f;
+  color: #fefefe;
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0px 1px 1px #111;
+}
+/* header */
 .dnd-header {
   width: 100%;
   height: 80px;
@@ -674,6 +776,7 @@ a:visited {
   background-position: center;
   background-image: url("../assets/logo-dnd-blue.png");
 }
+/* main content page */
 .dnd-page {
   position: absolute;
   width: 100%;
@@ -748,6 +851,22 @@ a:visited {
   fill: #fff;
   padding: 6px;
 }
+/*
+xs 0
+s 576
+m 768
+l 992
+xl 1200
+xxl 1400
+
+cf boostrap : https://getbootstrap.com/docs/5.0/layout/breakpoints/
+*/
+/* S */
+/* M */
+/* L */
+/* XL */
+/* XXL */
+/* local page styles */
 /*
 xs 0
 s 576

@@ -36,6 +36,10 @@
         {
             "name": "portfolio",
             "path": "realisations"
+        },
+        {
+            "name": "axial",
+            "path": "axial-js"
         }
     ]
 }

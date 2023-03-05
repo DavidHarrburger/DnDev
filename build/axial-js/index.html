@@ -3,18 +3,12 @@
 <head>
     <meta charset="utf-8">
 
-    <title>D n' Dev | Politique de confidentialité</title>
+    <title>D n' Dev | Axial JS</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./styles.css">
-
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="b1d39ace-0b94-4fae-a20a-52cd7127ce6c" data-blockingmode="auto" type="text/javascript"></script>
 </head>
 
 <body>
@@ -32,6 +26,15 @@
     <template id="axial-toggle-switch-template">
         <link rel="stylesheet" href="./styles.css">
         <div id="circle" class="axial_toggle_switch-circle"></div>
+    </template>
+
+    <!-- AxialToggleRadio -->
+    <template id="axial-toggle-radio-template">
+        <link rel="stylesheet" href="./styles.css">
+        <div id="border" class="axial_toggle_radio-border">
+            <div id="circle" class="axial_toggle_radio-circle"></div>
+        </div>
+        <slot name="axial-label">Label</slot>
     </template>
 
     <!-- AxialToggleButtonGroup -->
@@ -64,10 +67,58 @@
         <div class="dnd-page">
             <div class="dnd-page-content">
 
-                <h1>Politique de confidentialité</h1>
-                
-                <script id="CookieDeclaration" src="https://consent.cookiebot.com/b1d39ace-0b94-4fae-a20a-52cd7127ce6c/cd.js" type="text/javascript" async></script>
+                <h1>Axial JS</h1>
 
+                <p>Axial JS est mon propre framework et est disponible sur <a class="dnd-axial-github" href="https://github.com/DavidHarrburger/AxialJS" target="_blank">Github.</a></p>
+
+                <h2>Buttons</h2>
+
+                <h3>Axial Button</h3>
+                <axial-button>
+                    <span slot="axial-label">I'm an Axial Button</span>
+                </axial-button>
+                <code>
+                    <div>&lt;axial-button&gt;</div>
+                    <div class="dnd-code-tab-1">&lt;span axial-slot="axial-label"&gt;I'm an Axial Button&lt;&#47;span&gt;</div>
+                    <div>&lt;&#47;axial-button&gt;</div>
+                </code>
+
+                <h3>Axial Toggle Switch</h3>
+                <axial-toggle-switch></axial-toggle-switch>
+                <code>
+                    <div>&lt;axial-toggle-switch&gt;&lt;&#47;axial-toggle-switch&gt;</div>
+                </code>
+
+                <h3>Axial Toggle Radio</h3>
+                <axial-toggle-button-group-base>
+                    <axial-toggle-radio>
+                        <span slot="axial-label">Pomme &#127822;</span>
+                    </axial-toggle-radio>
+                    <axial-toggle-radio>
+                        <span slot="axial-label">Banane &#127820;</span>
+                    </axial-toggle-radio>
+                    <axial-toggle-radio>
+                        <span slot="axial-label">Poire &#127824;</span>
+                    </axial-toggle-radio>
+                </axial-toggle-button-group-base>
+                <code>
+                    <div>&lt;axial-toggle-button-group-base&gt;</div><br>
+
+                    <div class="dnd-code-tab-1">&lt;axial-toggle-radio&gt;</div>
+                    <div class="dnd-code-tab-2">&lt;span axial-slot="axial-label"&gt;Pomme &#38;&#35;127822&#59; &lt;&#47;span&gt;</div>
+                    <div class="dnd-code-tab-1">&lt;&#47;axial-toggle-radio&gt;</div><br>
+                    
+                    <div class="dnd-code-tab-1">&lt;axial-toggle-radio&gt;</div>
+                    <div class="dnd-code-tab-2">&lt;span axial-slot="axial-label"&gt;Banane &#38;&#35;127820&#59;&lt;&#47;span&gt;</div>
+                    <div class="dnd-code-tab-1">&lt;&#47;axial-toggle-radio&gt;</div><br>
+                    
+                    <div class="dnd-code-tab-1">&lt;axial-toggle-radio&gt;</div>
+                    <div class="dnd-code-tab-2">&lt;span axial-slot="axial-label"&gt;Poire &#38;&#35;127824&#59;&lt;&#47;span&gt;</div>
+                    <div class="dnd-code-tab-1">&lt;&#47;axial-toggle-radio&gt;</div><br>
+                    
+                    <div>&lt;&#47;axial-toggle-button-group-base&gt;</div>
+                </code>
+                
             </div>
 
             <div class="dnd-footer">
@@ -105,8 +156,8 @@
                 </div>
     
             </div>
-        </div>
 
+        </div>
     </div>
 
     <div id="axialPopupLayer" class="axial_popup_layer">
