@@ -35,8 +35,6 @@ class AxialToggleButtonGroupBase extends AxialComponentBase
             {
                 const tempToggle = tempToggles[i];
                 this.add(tempToggle);
-                console.log(tempToggle instanceof AxialToggleButtonBase === true);
-                
                 if( tempToggle instanceof AxialToggleButtonBase === true )
                 {
                     this.add(tempToggle);

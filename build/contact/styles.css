@@ -330,7 +330,7 @@ input {
   padding-right: 14px;
   background-color: #0463b1;
   border-radius: 4px;
-  box-shadow: 0px 1px 1px #111;
+  box-shadow: 0px 2px 2px #111;
   color: #fff;
   font-weight: 500;
 }
@@ -362,8 +362,9 @@ input {
 }
 /* AxialToggleRadio */
 .axial_toggle_radio {
-  width: auto;
-  min-width: 42px;
+  width: -moz-fit-content;
+  width: fit-content;
+  /*min-width: 42px;*/
   height: 42px;
   min-height: 42px;
   padding: 4px;
